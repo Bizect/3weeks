@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>회원가입 완료</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script type="text/javascript" src="../js/security.js" defer></script>
+<script type="text/javascript" src="../js/session.js" defer></script>
+<script>
+function displayUserInfo() {
+    const userInfo = session_join_get();
+    if (userInfo) {
+        console.log("User Info: ", userInfo);
+        // 여기에 userInfo를 화면에 표시하는 코드 추가 가능
+    } else {
+        console.log("No user info found in session.");
+    }
+}
+</script>
+</head>
+<body onload="displayUserInfo()">
+<div class="text-center p-3">
+    <h3 class="text-secondary">회원가입을 환영합니다! 화면의 로고를 클릭하면 메인화면으로 돌아갑니다.</h3>
+</div>
+<br>
+<hr>
+<div style="display: flex; justify-content: center;">
+    <a href="../index.html" target="_blank"><img src="../images/MAIN.jpg" class="img-fluid" width="1200" height="768"></a>
+</div>
+<hr>
+<div style="display: flex; justify-content: center;">
+    <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family: '굴림';">라이엇 게임 회사 정보 2024년 X월 작성됨</h3>
+</div>
+</body>
+</html>
